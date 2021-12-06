@@ -101,7 +101,7 @@ UK=Green_HV_delta_one_par(model,N,dt,y_max,delay_t,fmax,flag);
 offset=zeros(source_number,N_re);
 
 %% start of all receivers due to each point source and then stack
-numIterations = fN;
+numIterations = source_number;
 cpu_N=feature('numCores');
 str_kai=strcat(['Parallel computation using ', num2str(cpu_N)], ' cpu cores, Please wait...');
 hbar = parfor_progressbar(numIterations,str_kai); %create the progress bar
